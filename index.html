@@ -1,21 +1,46 @@
+<!DOCTYPE html lang="en">
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1 id="title">Generate a random password</h1>
-        <h3 id="subheading">Always use a secure password.</h3>
-        <button id="generate-btn" class="btn-text" onclick="renderPassword()" >Generate passwords</button>
-        
-        <div class="hLine">
-            <hr>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generater</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="head-section-container">
+            <h1 class="heading-top">Random password</h1>
+            <h1 class="heading-bottom">Generator</h1>
+            <div class="top-btn">
+                <button class="generate" onclick="generatePassword()">Generate Passwords</button>
+                <button class="clear-btn" onclick="clearPassword()">Clear</button>
+            </div>
         </div>
-        
-        <div class="passwords">
-            <p id="passOne-el" class="firstPass"></p>
-            <p id="passTwo-el" class="secondPass"></p>
+        <hr>
+        <div class="fields-place-holder">
+            <div class="password-one-display">
+                <p id="password-display-field-one"></p>
+            </div>
+            <div class="password-two-display">
+                <p id="password-display-field-two"></p>
+            </div>
         </div>
-        
-        <script src="index.js"></script>
-    </body>
+        <div class="character-length">
+            <p class="number-description" id="quantity">15</p>
+            <button class="characters" id="quantity-plus" onclick="addMore()">+</button>
+            <button class="characters" id="quantity-minus" onclick="addLess()">-</button>
+        </div>
+        <div class="selection-container">
+            <button class="selection" id="numbers" onclick="numberOnly()">Remove Numbers</button>
+            <button class="selection" id="letters" onclick="lettersOnly()">Remove Letters</button>
+            <button class="selection" id="special" onclick="specialOnly()">Remove Characters</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
 </html>
